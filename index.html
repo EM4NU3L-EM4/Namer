@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+  <div class="settings inv">
+    <h2>Definições</h2>
+
+    <hr />
+    <br />
+
+
+
+    <H4>Geral</H4>
+
+    Frase aleatória: <select name="type" id="random">
+
+      <option value="yes" selected>Sim</option>
+      <option value="no">Não</option>
+
+
+
+    </select>
+    <br>
+
+
+    Número de nomes: <br>
+    <input type="number" name="min" value="1" min="1" max=" 5" id="numname"> <br>
+
+    Mínimo de silabas: <br>
+    <input type="number" name="min" value="2" min="1" max=" 20" id="min"> <br>
+
+    Máximo de silabas: <br>
+    <input type="number" name="max" value="5" min="1" max=" 20" id="max"> <br>
+
+
+
+
+    <br><br><br>
+    <h4>Lista de letras</h4>
+
+
+    <label for="username">
+      Lista de letras A: <br>
+      <textarea name="listA" id="listA" cols="10" rows="4">BCDFGHJLMNPQRSTVXZ</textarea>
+
+    </label>
+
+    <br><br>
+    <label for="username">
+      Lista de letras B: <br>
+      <textarea name="listB" id="listB" cols="10" rows="4">AEIOU</textarea>
+    </label>
+
+
+    <label for="username">
+      Lista de letras C: <br>
+      <textarea name="listC" id="listC" cols="10" rows="4">LMNRS</textarea>
+    </label>
+
+    <label for="username">
+      Lista de letras D: <br>
+      <textarea name="listD" id="listD" cols="10" rows="4">KWY</textarea>
+    </label>
+
+    <label for="username">
+      Lista de letras E: <br>
+      <textarea name="listE" id="listE" cols="10" rows="4">R</textarea>
+    </label>
+
+    <br>
+    <br><br>
+    <h4>Padrões de combinação</h4>
+
+    Padrão 1: <br>
+    <input type="text" name="sampleA" maxlength="5" value="AB---" id="sampleA"> <br>
+    Peso do padrão 1: <br>
+    <input type="number" name="weightA" value="5" min="0" max="10" id="weightA"> <br>
+
+    <br>
+    Padrão 2: <br>
+    <input type="text" name="sampleB" maxlength="5" value="AEB--" id="sampleB"> <br>
+    Peso do padrão 2: <br>
+    <input type="number" name="weightB" value="1" min="0" max="10" id="weightB"> <br>
+
+
+    <br>
+    Padrão 3: <br>
+    <input type="text" name="sampleC" maxlength="5" value="B----" id="sampleC"> <br>
+    Peso do padrão 3: <br>
+    <input type="number" name="weightC" value="2" min="0" max="10" id="weightC"> <br>
+
+    <br>
+    Padrão 4: <br>
+    <input type="text" name="sampleD" maxlength="5" value="ABC--" id="sampleD"> <br>
+    Peso do padrão 4: <br>
+    <input type="number" name="weightD" value="2" min="0" max="10" id="weightD"> <br>
+
+    <br>
+    Padrão 5: <br>
+    <input type="text" name="sampleE" maxlength="5" value="-----" id="sampleE"> <br>
+    Peso do padrão 5: <br>
+    <input type="number" name="weightE" value="0" min="0" max="10" id="weightE"> <br>
+
+    <br><br><br>
+
+
+    <details>
+      <summary> Mais opções</summary>
+
+      <button>Copiar padrão</button>
+
+      <hr>
+
+      <textarea name="pattern" id="" cols="10" rows="4">BCDFGHJLMNPQRSTVXZ</textarea>
+
+      <button>Carregar padrão</button>
+
+    </details>
+
+    </select>
+
+
+  </div>
+
+
+
+  <div class="main">
+    <h1>Nomeador</h1>
+    <br>
+    <div class="name">
+
+      <div class="intro">
+
+        <h3 id="intro">Olá! Eu sou</h3>
+        <h1 id="namebox">...</h1>
+
+      </div>
+
+    </div>
+    <br>
+    <button id="mainbtn" onclick="CreateName()">Criar</button>
+    <hr>
+    <div class="opt">
+
+      <button onclick="copy()"><img src="img/icons8_copy_127px.png" alt=""></button>
+      <button onclick="spoiler()"><img src="img/icons8_invisible_127px.png" alt=""></button>
+      <button onclick="settings()"><img src="img/icons8_settings_127px.png" alt=""></button>
+      <button onclick="history()"><img src="img/icons8_time_machine_127px.png" alt=""></button>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="history inv">
+
+    <h2>Favoritos</h2>
+    <hr />
+    <br />
+
+
+    <ul id="fav">
+
+
+    </ul>
+    <h2>Histórico</h2>
+    <hr />
+    <br />
+
+
+    <ul id="history">
+
+
+    </ul>
+  </div>
+
+
+
+  <script src="sys.js"></script>
+</body>
+
+
+</html>
